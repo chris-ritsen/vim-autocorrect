@@ -43612,3 +43612,5 @@ iab reposoity repository
 iab puyshing pushing
 iab commptuers computers
 iab udpates updates
+iab dierctory directory
+iab toeghetr together
