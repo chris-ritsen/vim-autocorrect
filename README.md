@@ -48,7 +48,7 @@ list was created by making every effort to avoid unintentional corrections.
 #### Installation
 
 This is a package of two vim plugins and should only be installed to
-`~/.vim/pack/abbrev`.  The
+`~/.vim/pack/vim-autocorrect`.  The
 [autocorrect.vim](start/vim-abbrev-add/plugin/autocorrect.vim) plugin has
 functions to interactively add abbreviations to the list. It currently relies
 on a hard-coded package path to find

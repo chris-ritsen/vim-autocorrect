@@ -4858,6 +4858,7 @@ iab abbreibations abbreviations
 iab abbreivaitiosn abbreviations
 iab abbreivation abbreviation
 iab abbrevaiotions abbreviations
+iab abbrevaition abbreviation
 iab abbrevation abbreviation
 iab abbrevations abbreviations
 iab abbrevatioqtns abbreviations
@@ -19808,6 +19809,7 @@ iab genearate generate
 iab genearl general
 iab genearlal general
 iab genearlly generally
+iab genearte generate
 iab geneder gender
 iab geneerally generally
 iab geneeric generic
@@ -19892,6 +19894,7 @@ iab ghave have
 iab ghe the
 iab ghere here
 iab ghet get
+iab ghithub github
 iab gho go
 iab ghoals goals
 iab ghradual gradual
@@ -42135,6 +42138,7 @@ iab weareniung wearing
 iab wearly early
 iab wearth earth
 iab weas was
+iab weaste waste
 iab weatched watched
 iab weatching watching
 iab weatehr weather
@@ -43601,7 +43605,3 @@ iab zshv zsh
 iab zsswh zsh
 iab ztart start
 iab ztaships starships
-iab weaste waste
-iab ghithub github
-iab abbrevaition abbreviation
-iab genearte generate
