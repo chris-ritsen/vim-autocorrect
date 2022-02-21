@@ -13390,6 +13390,7 @@ iab decgree degree
 iab decible decibel
 iab decicated dedicated
 iab decice decide
+iab decice device
 iab deciced decided
 iab decices devices
 iab decicion decision
@@ -29900,6 +29901,7 @@ iab piostion position
 iab piostions positions
 iab piostionso positions
 iab piotential potential
+iab pipeed piped
 iab pipline pipeline
 iab pirimary primary
 iab pirmairy primary
@@ -31439,6 +31441,7 @@ iab progra program
 iab prograaaaxtination procrastination
 iab prograc4tionatin procrastination
 iab programatically programmatically
+iab programiiing programming
 iab programm program
 iab programmaitically programmatically
 iab programmiaicaly programmatically
@@ -32453,6 +32456,7 @@ iab reasl real
 iab reaslise realise
 iab reaslly really
 iab reasno reason
+iab reasoanble reasonable
 iab reasoin reason
 iab reasolution resolution
 iab reasonabe reasonable
@@ -32681,6 +32685,7 @@ iab rediesigned redesigned
 iab rediessgn redesign
 iab redirecdt redirect
 iab redirecr redirect
+iab redirectred redirected
 iab rediredgerator refrigerator
 iab rediret redirect
 iab redisciver rediscover
