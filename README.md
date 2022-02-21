@@ -43,7 +43,8 @@ list was created by making every effort to avoid unintentional corrections.
 - Remove any leading characters from the previous word due to a mistimed
   spacebar press.
 - Remove any typos that end up being variable names, nouns, brands, etc., but
-  only when discovered.
+  only when discovered.  For example, the program 'mosquitto' should not be
+  corrected to 'mosquito'.
 
 #### Installation
 
