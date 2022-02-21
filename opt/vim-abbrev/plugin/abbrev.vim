@@ -43608,3 +43608,7 @@ iab zshv zsh
 iab zsswh zsh
 iab ztart start
 iab ztaships starships
+iab reposoity repository
+iab puyshing pushing
+iab commptuers computers
+iab udpates updates
