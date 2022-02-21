@@ -164,10 +164,12 @@ iab Anwyays Anyways
 iab Anyt Any
 iab Anythign Anything
 iab Anyting Anything
+iab Anytway Anyway
 iab Aobut About
 iab Apaparenly Apparently
 iab Apapernhtly Apparently
 iab Apapernlty Apparently
+iab Apaperntly Apparently
 iab Apapprenlty Apparently
 iab Apaprenlty Apparently
 iab Apaprently Apparently
@@ -6489,6 +6491,7 @@ iab annyyoing annoying
 iab anoather another
 iab anod and
 iab anoether another
+iab anoethoer another
 iab anoethr another
 iab anohter another
 iab anoitehr another
@@ -6509,6 +6512,7 @@ iab anoterh another
 iab anotgher another
 iab anothber another
 iab anothe another
+iab anotheer another
 iab anothere another
 iab anotherh another
 iab anothger another
@@ -10912,6 +10916,7 @@ iab commobn common
 iab commomn common
 iab commonplade commonplace
 iab commplete complete
+iab commptuers computers
 iab commputer computer
 iab commuatator commutator
 iab commucate communicate
@@ -11317,6 +11322,7 @@ iab conceentrate concentrate
 iab conceerns concerns
 iab conceetration concentration
 iab conceieve conceive
+iab conceiovably conceivably
 iab concenrs concerns
 iab concenstraiont concentration
 iab concenteration concentration
@@ -14554,6 +14560,7 @@ iab direcitonpi direction
 iab direcitory directory
 iab direcltly directly
 iab direclty directly
+iab direcotries directories
 iab direcotry directory
 iab direcoverty directory
 iab direcrely directly
@@ -17553,6 +17560,7 @@ iab evevent event
 iab evewrything everything
 iab eveyone everyone
 iab eveyr every
+iab eveyrhign everything
 iab eveyrhitng everything
 iab eveyrhting everything
 iab eveyroine everyone
@@ -18055,6 +18063,7 @@ iab expcet expect
 iab expcetion exception
 iab expclaimation exclamation
 iab expct expect
+iab expctted expected
 iab expecation exception
 iab expecation expectation
 iab expecations expectations
@@ -28878,6 +28887,7 @@ iab paciified pacified
 iab paciticfiaction pacification
 iab paciticfiation pacification
 iab pacitificatoin pacification
+iab packaege package
 iab packageing packaging
 iab packagesd packages
 iab packagfes packages
@@ -31930,6 +31940,7 @@ iab putitng putting
 iab puyrpose purpose
 iab puyrpsose purpose
 iab puyrsiing pursuing
+iab puyshing pushing
 iab puyt put
 iab puytting putting
 iab pweopele people
@@ -33278,6 +33289,7 @@ iab repositiory repository
 iab repositiroy repository
 iab repositoiry repository
 iab reposoitioning repositioning
+iab reposoity repository
 iab repostion reposition
 iab reppeated repeated
 iab repply reply
@@ -36877,6 +36889,7 @@ iab sthe the
 iab sthem them
 iab sthere there
 iab sthit shit
+iab sthpud stupid
 iab stiacrase staircase
 iab stiaercaew staircase
 iab stiarcae staircase
@@ -39544,6 +39557,7 @@ iab toegehther together
 iab toegerther together
 iab toegether together
 iab toeghether together
+iab toeghetr together
 iab toeghetrr together
 iab toegther together
 iab toehgrwisde otherwise
@@ -40526,6 +40540,7 @@ iab udnwrtasnding understanding
 iab udpate update
 iab udpatead updated
 iab udpated updated
+iab udpates updates
 iab udpatqing updating
 iab udpckaitced duplicated
 iab udsnerstand understand
@@ -43608,21 +43623,3 @@ iab zshv zsh
 iab zsswh zsh
 iab ztart start
 iab ztaships starships
-iab reposoity repository
-iab puyshing pushing
-iab commptuers computers
-iab udpates updates
-iab dierctory directory
-iab toeghetr together
-iab Anytway Anyway
-iab expctted expected
-iab direcotries directories
-iab conceiovably conceivably
-iab hsould should
-iab newwer newer
-iab packaege package
-iab anoethoer another
-iab ANything Anything
-iab ealrier earlier
-iab bertween between
-iab eveyrhign everything
