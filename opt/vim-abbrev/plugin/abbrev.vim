@@ -7923,6 +7923,7 @@ iab autocorecdtiosn autocorrections
 iab autocorection autocorrection
 iab autocorections autocorrections
 iab autocorrcdtions autocorrections
+iab autocorrct autocorrect
 iab autocorrctions autocorrections
 iab autocorrecdtion autocorrection
 iab autocorrecdtions autocorrections
@@ -26303,6 +26304,7 @@ iab moderl model
 iab modfaihnil modafinil
 iab modfal modal
 iab modfieid modified
+iab modfiied modified
 iab modfitying modifying
 iab modfiy modify
 iab modicfacation modification
@@ -36487,6 +36489,7 @@ iab speicificlaly specifically
 iab speicifics specifics
 iab speicificuly specifically
 iab speicifxally specifically
+iab speiicifc specific
 iab speins spins
 iab speirutual spiritual
 iab spekaing speaking
