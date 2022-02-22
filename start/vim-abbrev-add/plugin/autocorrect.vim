@@ -78,7 +78,7 @@ function! s:AC_commit()
     let correct_word = s:corrections[key]
 
     let abbrev_entry = 'iab ' . incorrect_word . ' ' . correct_word
-    let s:abbrev_file = expand($HOME) . '/.vim/pack/autocorrect/opt/vim-abbrev/plugin/abbrev.vim'
+    let s:abbrev_file = expand($HOME) . '/.vim/pack/vim-autocorrect/opt/vim-abbrev/plugin/abbrev.vim'
     let s:lines = [abbrev_entry]
     call writefile(readfile(s:abbrev_file) + s:lines, s:abbrev_file)
     execute 'iab ' incorrect_word . ' ' . correct_word

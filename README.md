@@ -1,9 +1,9 @@
 #### Description
 
 This is a vim package for an autocorrect feature built on the `iabbrev` and
-`spellsuggest` commands and years worth of typos on qwerty keyboards.  The
-result is useful for writing general prose or code, but is especially good for
-a stream-of-consciousness or for transcription.
+`spellsuggest` commands and years worth of spelling mistakes and typos made on
+qwerty keyboards.  The result is useful for writing general prose or code, but
+is especially good for a stream-of-consciousness or for transcription.
 
 The full list of 43,000 typos is in
 [abbrev.vim](opt/vim-abbrev/plugin/abbrev.vim).  It is made up of only
