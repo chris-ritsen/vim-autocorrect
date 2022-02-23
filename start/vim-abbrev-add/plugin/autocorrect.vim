@@ -1,3 +1,9 @@
+if !exists('g:abbrev_file')
+  let g:abbrev_file = expand($HOME) . '/.vim/pack/vim-autocorrect/opt/vim-abbrev/plugin/abbrev.vim'
+endif
+
+let g:loaded_AutoCorrect = 1
+
 function! s:get_word(something)
   setlocal spell
 
@@ -53,7 +59,7 @@ function! s:get_word(something)
   return corrections
 endfunction
 
-function! s:AC_commit()
+function! s:AutoCorrect_commit()
   unlet! s:corrections
   unlet! s:thing
 
@@ -66,7 +72,7 @@ function! s:AC_commit()
   endfor
 
   close
-  exe 'sb ' . g:AC_last_buffer
+  exe 'sb ' . g:AutoCorrect_last_buffer
 
   for key in keys(s:corrections)
     " What about when a partial incorrect word replaces something in another
@@ -78,9 +84,10 @@ function! s:AC_commit()
     let correct_word = s:corrections[key]
 
     let abbrev_entry = 'iab ' . incorrect_word . ' ' . correct_word
-    let s:abbrev_file = expand($HOME) . '/.vim/pack/vim-autocorrect/opt/vim-abbrev/plugin/abbrev.vim'
     let s:lines = [abbrev_entry]
-    call writefile(readfile(s:abbrev_file) + s:lines, s:abbrev_file)
+
+    call writefile(s:lines, g:abbrev_file, "a")
+
     execute 'iab ' incorrect_word . ' ' . correct_word
   endfor
 
@@ -88,7 +95,7 @@ function! s:AC_commit()
   normal! }zz
 endfunction
 
-function! AC(...) range
+function! AutoCorrect(...) range
   unlet! g:begin_line
   unlet! g:end_line
   unlet! s:corrections
@@ -97,11 +104,13 @@ function! AC(...) range
   let s:lines = getline(a:firstline, a:lastline)
 
   let bname = '__Autocorrect__'
-  let g:AC_last_buffer = bufnr('%')
+  let g:AutoCorrect_last_buffer = bufnr('%')
   let g:begin_line = a:firstline
   let g:end_line = a:lastline
 
   let winnum = bufwinnr(bname)
+
+  echo g:abbrev_file
 
   if winnum != -1
     if winnr() != winnum
@@ -162,7 +171,7 @@ function! AC(...) range
 
   if len(keys(s:corrections)) == 0
     close
-    exe 'sb ' . g:AC_last_buffer
+    exe 'sb ' . g:AutoCorrect_last_buffer
 
     execute 'wincmd _'
     normal! }zz
@@ -176,10 +185,10 @@ function! AC(...) range
   setlocal modifiable
   setlocal spell
 
-  nnoremap <buffer> <silent> <C-c> :close<CR>:exe 'sb ' . g:AC_last_buffer<CR>
-  nnoremap <buffer> <silent> <C-j> :call <SID>AC_commit()<CR>
-  nnoremap <buffer> <silent> <CR> :call <SID>AC_commit()<CR>
-  nnoremap <buffer> <silent> q :close<CR>:exe 'sb ' . g:AC_last_buffer<CR>
+  nnoremap <buffer> <silent> <C-c> :close<CR>:exe 'sb ' . g:AutoCorrect_last_buffer<CR>
+  nnoremap <buffer> <silent> <C-j> :call <SID>AutoCorrect_commit()<CR>
+  nnoremap <buffer> <silent> <CR> :call <SID>AutoCorrect_commit()<CR>
+  nnoremap <buffer> <silent> q :close<CR>:exe 'sb ' . g:AutoCorrect_last_buffer<CR>
 
   " TODO: Don't even create the buffer if there is nothing to do.
 

@@ -1,9 +1,10 @@
 #### Description
 
-This is a vim package for an autocorrect feature built on the `iabbrev` and
-`spellsuggest` commands and years worth of spelling mistakes and typos made on
-qwerty keyboards.  The result is useful for writing general prose or code, but
-is especially good for a stream-of-consciousness or for transcription.
+This is a vim package  for an autocorrect feature built on the
+`iabbrev` and `spellsuggest` commands and years worth of spelling mistakes and
+typos made on qwerty keyboards.  The result is useful for writing general
+prose or code, but is especially good for a stream-of-consciousness or for
+transcription.
 
 The full list of 43,000 typos is in
 [abbrev.vim](opt/vim-abbrev/plugin/abbrev.vim).  It is made up of only
@@ -48,12 +49,18 @@ list was created by making every effort to avoid unintentional corrections.
 
 #### Installation
 
-This is a package of two vim plugins and should only be installed to
+This is a package of two vim plugins and should be installed to
 `~/.vim/pack/vim-autocorrect`.  The
 [autocorrect.vim](start/vim-abbrev-add/plugin/autocorrect.vim) plugin has
-functions to interactively add abbreviations to the list. It currently relies
-on a hard-coded package path to find
-[abbrev.vim](opt/vim-abbrev/plugin/abbrev.vim).
+functions to interactively add abbreviations to the list. By default, the
+typos and their corrections are added to
+[abbrev.vim](opt/vim-abbrev/plugin/abbrev.vim), but this can be overridden by
+setting the variable `g:abbrev_file`.
+
+```
+let g:abbrev_file = expand('$HOME/.vim/pack/vim-autocorrect/opt/vim-abbrev/plugin/abbrev.vim')
+```
+
 
 #### Usage
 
@@ -65,11 +72,12 @@ To source the list of abbreviations (i.e., enable autocorrect):
 
 This will take several seconds to load.
 
-To quickly add abbreviations to the file after making typos, map the `AC`
+To quickly add abbreviations to the file after making typos, map the
+`AutoCorrect`
 command like this:
 
 ```
-nnoremap <silent> <leader>d <esc>vip:call AC()<CR>
+nnoremap <silent> <leader>d <esc>vip:call AutoCorrect()<CR>
 ```
 
 The `vip` here will select the current paragraph and pull out typos and use

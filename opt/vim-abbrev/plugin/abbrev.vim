@@ -1,3 +1,9 @@
+if exists('g:loaded_AutoCorrect')
+  finish
+endif
+
+let g:loaded_AutoCorrect = 1
+
 iab 0of of
 iab 2w3ill will
 iab 2was was
@@ -43627,7 +43633,6 @@ iab zshv zsh
 iab zsswh zsh
 iab ztart start
 iab ztaships starships
-iab msitakes mistakes
 iab Agreeed Agreed
 iab Bettter Better
 iab Easahlishing Establishing
@@ -43672,6 +43677,7 @@ iab jsut just
 iab malfuciotns malfunctions
 iab measdure measure
 iab msitaken mistaken
+iab msitakes mistakes
 iab palguging plaguing
 iab peleasure pleasure
 iab playabkc playback
@@ -43691,3 +43697,5 @@ iab undrer under
 iab wahtever whatever
 iab whichester winchester
 iab wwsternr western
+iab teh the
+iab overriden overridden
