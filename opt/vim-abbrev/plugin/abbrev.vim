@@ -8,13 +8,19 @@ if !exists('g:abbrev_file')
   let g:abbrev_file = expand($HOME) . '/.vim/pack/vim-autocorrect/opt/vim-abbrev/plugin/abbrev'
 endif
 
-function! AddAbbrev(typo, correction, timer)
-  execute 'silent! iab ' a:typo . ' ' . a:correction
-endfunction
+let s:t = reltime()
+let s:data = readfile(g:abbrev_file)
+let s:sz = 50
 
-for line in readfile(g:abbrev_file, '')
-  let tuple = split(line, " ")
-  let typo = tuple[0]
-  let correction = tuple[1]
-  call timer_start(rand() % 50000, function('AddAbbrev', [typo, correction]))
-endfor
+func! s:DefAbbrevs(i = 0) abort
+    exe s:data[a:i : a:i + s:sz - 1]->map({_, v -> 'ia ' .. v})->join('|')
+
+    if a:i + s:sz < s:data->len()
+        call timer_start(1, {-> s:DefAbbrevs(a:i + s:sz)})
+    else
+        " echom 'Finished defining abbreviations in' reltimestr(reltime(s:t)) 's'
+        unlet s:t s:sz s:data
+    endif
+endfunc
+
+call s:DefAbbrevs()

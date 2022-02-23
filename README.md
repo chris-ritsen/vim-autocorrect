@@ -25,10 +25,11 @@ iabbrev teh the
 It's not a grammar checker.  There's no way to fix transposition typos on
 short words like from/form, but it works well for longer or difficult words.
 
-The main problem is that it takes about ten seconds to source this list,
-which blocks the user's input.  So, this has been set to add the abbreviations
-at a randomized delay with `timer_start`.  About 50 seconds after loading the
-package, it should have sourced everything.
+The problem was that it takes time to source this list and with every
+abbreviation added it takes vim longer to insert one, which blocks user input.
+So instead of that, abbreviations are added in batches at a delay with
+`timer_start`.  About 10 seconds after loading the package, it should have
+sourced everything.
 
 #### Rules
 
