@@ -1,6 +1,6 @@
 #### Description
 
-This is a vim package  for an autocorrect feature built on the
+This is a vim package for an autocorrect feature built on the
 `iabbrev` and `spellsuggest` commands and years worth of spelling mistakes and
 typos made on qwerty keyboards.  The result is useful for writing general
 prose or code, but is especially good for a stream-of-consciousness or for
@@ -29,13 +29,16 @@ list was created by making every effort to avoid unintentional corrections.
 
 - Add accents to letters only if the correct word is unambiguous.
 - Add typos only; don't use this for expanding abbreviated words
-- Avoid adding short words, such as those under four characters long.
+- Avoid adding short words, such as those under four characters long.  The
+  typo "atht" made by typing "at that" with a mistimed spacebar should not be
+  corrected into "that".
 - Avoid making decisions about mixed-case acronyms.
 - Don't add words that are unlikely to broadly usable, such as camel case
   variable names.
 - Don't attempt to localize/localise words.
 - Don't change capitalization of words.
 - Don't consider foreign words as typos, if known.
+- Don't correct short words with a missing letter
 - Don't pluralize words that weren't already pluralized.
 - No synthetic typos.
 - Prioritize compatibility with writing prose over code, but attempt to make

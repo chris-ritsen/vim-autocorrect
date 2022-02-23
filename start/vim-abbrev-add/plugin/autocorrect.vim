@@ -108,7 +108,7 @@ function! AutoCorrect(...) range
 
   let winnum = bufwinnr(bname)
 
-  echo g:abbrev_file
+  " echo g:abbrev_file
 
   if winnum != -1
     if winnr() != winnum
