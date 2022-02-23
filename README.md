@@ -10,9 +10,14 @@ prose or code, but is especially good for a stream-of-consciousness or for
 transcription.
 
 The full list of 43,000 typos is in
-[abbrev.vim](opt/vim-abbrev/plugin/abbrev.vim).  It is made up of only
-commands like these:
+[abbrev.vim](opt/vim-abbrev/plugin/abbrev).  It is made up of only
+lines like these:
 
+```
+teh the
+````
+
+These are then added to vim as iabbrev definitions:
 ```
 iabbrev teh the
 ````
@@ -20,13 +25,14 @@ iabbrev teh the
 It's not a grammar checker.  There's no way to fix transposition typos on
 short words like from/form, but it works well for longer or difficult words.
 
-The main problem is that it takes several seconds to source this list, so it's
-not meant to be used for transient instances of vim until this can be
-implemented in some asynchronous way.
+The main problem is that it takes about ten seconds to source this list,
+which blocks the user's input.  So, this has been set to add the abbreviations
+at a randomized delay with `timer_start`.  About 50 seconds after loading the
+package, it should have sourced everything.
 
 #### Rules
 
-Deleting the words in [abbrev.vim](opt/vim-abbrev/plugin/abbrev.vim) and
+Deleting the words in [abbrev.vim](opt/vim-abbrev/plugin/abbrev) and
 starting from scratch with any set of rules is an option, but the included
 list was created by making every effort to avoid unintentional corrections.
 

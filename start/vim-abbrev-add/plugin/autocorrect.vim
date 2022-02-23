@@ -1,5 +1,5 @@
 if !exists('g:abbrev_file')
-  let g:abbrev_file = expand($HOME) . '/.vim/pack/vim-autocorrect/opt/vim-abbrev/plugin/abbrev.vim'
+  let g:abbrev_file = expand($HOME) . '/.vim/pack/vim-autocorrect/opt/vim-abbrev/plugin/abbrev'
 endif
 
 function! s:get_word(something)
@@ -81,7 +81,7 @@ function! s:AutoCorrect_commit()
     let incorrect_word = key
     let correct_word = s:corrections[key]
 
-    let abbrev_entry = 'iab ' . incorrect_word . ' ' . correct_word
+    let abbrev_entry = incorrect_word . ' ' . correct_word
     let s:lines = [abbrev_entry]
 
     call writefile(s:lines, g:abbrev_file, "a")
@@ -200,4 +200,4 @@ function! s:BufferIsEmpty()
   endif
 endfunction
 
-command! -bar -nargs=0 -range=% AC <line1>,<line2>call AC()
+command! -bar -nargs=0 -range=% AC <line1>,<line2>call AutoCorrect()
