@@ -60,7 +60,7 @@ on a hard-coded package path to find
 To source the list of abbreviations (i.e., enable autocorrect):
 
 ```
-:packadd vim-autocorrect
+:packadd vim-abbrev
 ```
 
 This will take several seconds to load.
