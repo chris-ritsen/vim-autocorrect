@@ -1,3 +1,6 @@
+#### Demo
+<p align="center"><img src="https://github.com/chris-ritsen/vim-autocorrect/blob/master/demo/demo.gif?raw=true" alt="" title="vim-autocorrect demo" width=481 height=284/></p>
+
 #### Description
 
 This is a vim package for an autocorrect feature built on the
