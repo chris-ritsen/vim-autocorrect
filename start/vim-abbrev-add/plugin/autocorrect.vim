@@ -2,8 +2,6 @@ if !exists('g:abbrev_file')
   let g:abbrev_file = expand($HOME) . '/.vim/pack/vim-autocorrect/opt/vim-abbrev/plugin/abbrev.vim'
 endif
 
-let g:loaded_AutoCorrect = 1
-
 function! s:get_word(something)
   setlocal spell
 
