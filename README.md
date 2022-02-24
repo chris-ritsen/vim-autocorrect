@@ -1,5 +1,5 @@
 #### Description
-<p align="center"><img src="https://github.com/chris-ritsen/vim-autocorrect/blob/master/demo/description.gif?raw=true" alt="" title="vim-autocorrect description" width="474" height="316"/></p>
+<p align="center"><img src="https://github.com/chris-ritsen/vim-autocorrect/blob/master/demo/description.gif?raw=true" alt="" title="vim-autocorrect description" width="474"/></p>
 
 This is a vim package for an autocorrect feature built on the `iabbrev` and
 `spellsuggest` commands and years worth of spelling mistakes and typos made on
@@ -30,7 +30,7 @@ delay with `timer_start`.  About 10 seconds after loading the package, it
 should have sourced everything.
 
 #### Rules
-<p align="center"><img src="https://github.com/chris-ritsen/vim-autocorrect/blob/master/demo/rules.gif?raw=true" alt="" title="vim-autocorrect rules" width="474" height="380"/></p>
+<p align="center"><img src="https://github.com/chris-ritsen/vim-autocorrect/blob/master/demo/rules.gif?raw=true" alt="" title="vim-autocorrect rules" width="474"/></p>
 
 Deleting the words in [abbrev](opt/vim-abbrev/plugin/abbrev) and starting from
 scratch with any set of rules is an option, but the included list was created
