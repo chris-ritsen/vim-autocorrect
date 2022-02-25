@@ -9,7 +9,13 @@ if !exists('g:abbrev_file')
 endif
 
 let s:t = reltime()
-let s:data = readfile(g:abbrev_file)
+
+func FilterBad(index, value)
+  return len(split(a:value)) == 2
+endfunc
+
+let s:data = filter(readfile(g:abbrev_file), function('FilterBad'))
+
 let s:sz = 50
 
 func! s:DefAbbrevs(i = 0) abort
