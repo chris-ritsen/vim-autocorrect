@@ -37,30 +37,48 @@ should have sourced everything.
 
 Deleting the words in [abbrev](opt/vim-abbrev/plugin/abbrev) and starting from
 scratch with any set of rules is an option, but the included list was created
-by making every effort to avoid unintentional corrections.
+by making every effort to avoid unintentional corrections.  Corrections should
+prioritize the position of letters on a standard qwerty keyboard before
+considering spelling mistakes.  Many typos are generated from timing errors
+made by using both hands, especially if capitalization is involved.
 
-- Add accents to letters only if the correct word is unambiguous.
-- Add typos only; don't use this for expanding abbreviated words.
-- Avoid adding short words, such as those under four characters long.  The
-  typo "atht" made by typing "at that" with a mistimed spacebar should not be
-  corrected into "at" or "that".
+
+- Add diacritical marks to letters only if the correct word is unambiguous.
+  Correcting "Senor" to "Señor" is fine right up until "Senor" is written as a
+  typo for "Sensor" or "Senior".
+- Add typos only; don't use this for expanding abbreviated words.  At most,
+  this should be limited to a character or two omitted from the end of a long
+  word, or a short word if the correct word is unambiguous.  Correcting "abou"
+  to "about" is fine.
+- Avoid adding short words, such as those under four characters long.
 - Avoid making decisions about mixed-case acronyms.
+- Don't add contractions or word fragments
 - Don't add words that are unlikely to broadly usable, such as camel case
   variable names.
 - Don't attempt to localize/localise words.
-- Don't change capitalization of words.
+- Don't change capitalization of words, as it could be part of a string
+  literal or variable name.  "Paypal" should not be changed into "PayPal".
+  The word "I" should not corrected when "i" is typed.
 - Don't consider foreign words as typos, if known.
-- Don't correct short words with a missing letter
+- Don't correct short words with a missing letter.
+- Don't enforce a preferred spelling.  "Eery" should not be corrected to
+  "Eerie".
 - Don't pluralize words that weren't already pluralized.
 - No synthetic typos.
 - Prioritize compatibility with writing prose over code, but attempt to make
   it work with both if possible.
 - Remove any autocorrection that results in a word that was unintended.
 - Remove any leading characters from the previous word due to a mistimed
-  spacebar press.
-- Remove any typos that end up being variable names, nouns, brands, etc., but
-  only when discovered.  For example, the program 'mosquitto' should not be
-  corrected to 'mosquito'.
+  spacebar press, unless they are valid words or used as variable names.  For
+  example, "yto" might have been a misspelling of "toy" but it was actually a
+  stray letter from a previous word prefixed to the word "to".  The typo
+  "atht" made by typing "at that" with a mistimed spacebar should not be
+  corrected into "at" or "that".
+- Remove any typos that end up being programs, libraries, variables, names,
+  nouns, brands, etc., but only when discovered.  For example, the program
+  named 'mosquitto' should not be corrected to 'mosquito'.
+- Review recently added typos and check for errors.  Hastily adding them and
+  assuming `spellsuggest` got it right isn't reliable.
 
 #### Installation
 
