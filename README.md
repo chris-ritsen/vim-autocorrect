@@ -23,7 +23,10 @@ It's not a grammar checker.  There's no way to fix transposition typos on
 short words like `from`/`form`, but it works well for longer words or those
 that are difficult to spell.
 
+## Demos
+
 <p align="center"><img src="https://github.com/chris-ritsen/vim-autocorrect/blob/master/demo/description.gif?raw=true" alt="" title="vim-autocorrect description" width="474"/></p>
+<p align="center"><img src="https://github.com/chris-ritsen/vim-autocorrect/blob/master/demo/rules.gif?raw=true" alt="" title="vim-autocorrect rules" width="474"/></p>
 
 ## Rules
 
@@ -80,9 +83,6 @@ made by using both hands, especially if capitalization is involved.
   stray letter from a previous word prefixed to the word `to`.  The typo
   `atht` made by typing `at that` with a mistimed spacebar should not be
   corrected into `at` or `that`.
-
-
-<p align="center"><img src="https://github.com/chris-ritsen/vim-autocorrect/blob/master/demo/rules.gif?raw=true" alt="" title="vim-autocorrect rules" width="474"/></p>
 
 ## Installation
 
