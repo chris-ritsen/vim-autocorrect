@@ -28,6 +28,51 @@ that are difficult to spell.
 <p align="center"><img src="https://github.com/chris-ritsen/vim-autocorrect/blob/master/demo/description.gif?raw=true" alt="" title="vim-autocorrect description" width="474"/></p>
 <p align="center"><img src="https://github.com/chris-ritsen/vim-autocorrect/blob/master/demo/rules.gif?raw=true" alt="" title="vim-autocorrect rules" width="474"/></p>
 
+## Installation
+
+This is a package of two vim plugins and should be installed to
+`~/.vim/pack/vim-autocorrect`.  The
+[autocorrect.vim](start/vim-abbrev-add/plugin/autocorrect.vim) plugin has
+functions to interactively add abbreviations to the list.  By default, the
+typos and their corrections are added to
+[abbrev](opt/vim-abbrev/plugin/abbrev), but this can be overridden by setting
+the variable `g:abbrev_file`.
+
+```
+let g:abbrev_file = expand('$HOME/.vim/pack/vim-autocorrect/opt/vim-abbrev/plugin/abbrev')
+```
+
+## Usage
+
+To source the list of abbreviations (i.e., enable autocorrect):
+
+```
+:packadd vim-abbrev
+```
+
+This will take several seconds to load.  The problem is that it takes time to
+source this list and with every abbreviation added it takes vim longer to
+insert one, which blocks user input.  Abbreviations are loading asynchronously
+in batches of decreasing size at a delay with `timer_start`.  About 10 seconds
+after loading the package, it should have sourced everything.
+
+To quickly add abbreviations to the file after making typos, map the
+`AutoCorrect` command like this:
+
+```
+nnoremap <silent> <leader>d <esc>vip:call AutoCorrect()<CR>
+```
+
+The `vip` here will select the current paragraph and pull out typos and use
+the built-in `spellsuggest` feature to guess at a correction.  After pressing
+`enter` or `<c-j>` to confirm the new abbreviations, they will be written to
+the file and added with iabbrev.  Removal of words must be done manually.
+
+If you need to write a word that would otherwise be autocorrected, such as
+`teh`, type `<C-C>` or `<C-V>` after writing the word. `<C-C>` goes back to
+normal mode without performing the correction, while `<C-V>` stays in insert
+mode.
+
 ## Rules
 
 Deleting the words in [abbrev](opt/vim-abbrev/plugin/abbrev) and starting from
@@ -83,49 +128,3 @@ made by using both hands, especially if capitalization is involved.
   stray letter from a previous word prefixed to the word `to`.  The typo
   `atht` made by typing `at that` with a mistimed spacebar should not be
   corrected into `at` or `that`.
-
-## Installation
-
-This is a package of two vim plugins and should be installed to
-`~/.vim/pack/vim-autocorrect`.  The
-[autocorrect.vim](start/vim-abbrev-add/plugin/autocorrect.vim) plugin has
-functions to interactively add abbreviations to the list.  By default, the
-typos and their corrections are added to
-[abbrev](opt/vim-abbrev/plugin/abbrev), but this can be overridden by setting
-the variable `g:abbrev_file`.
-
-```
-let g:abbrev_file = expand('$HOME/.vim/pack/vim-autocorrect/opt/vim-abbrev/plugin/abbrev')
-```
-
-
-## Usage
-
-To source the list of abbreviations (i.e., enable autocorrect):
-
-```
-:packadd vim-abbrev
-```
-
-This will take several seconds to load.  The problem is that it takes time to
-source this list and with every abbreviation added it takes vim longer to
-insert one, which blocks user input.  Abbreviations are loading asynchronously
-in batches of decreasing size at a delay with `timer_start`.  About 10 seconds
-after loading the package, it should have sourced everything.
-
-To quickly add abbreviations to the file after making typos, map the
-`AutoCorrect` command like this:
-
-```
-nnoremap <silent> <leader>d <esc>vip:call AutoCorrect()<CR>
-```
-
-The `vip` here will select the current paragraph and pull out typos and use
-the built-in `spellsuggest` feature to guess at a correction.  After pressing
-`enter` or `<c-j>` to confirm the new abbreviations, they will be written to
-the file and added with iabbrev.  Removal of words must be done manually.
-
-If you need to write a word that would otherwise be autocorrected, such as
-`teh`, type `<C-C>` or `<C-V>` after writing the word. `<C-C>` goes back to
-normal mode without performing the correction, while `<C-V>` stays in insert
-mode.
