@@ -39,7 +39,7 @@ typos and their corrections are added to
 the variable `g:abbrev_file`.
 
 ```
-let g:abbrev_file = expand('$HOME/.vim/pack/vim-autocorrect/opt/vim-abbrev/plugin/abbrev')
+let g:abbrev_file = expand('~/.vim/pack/vim-autocorrect/opt/vim-abbrev/plugin/abbrev')
 ```
 
 ## Usage
