@@ -1,4 +1,4 @@
-#### Description
+### Description
 
 <p align="center"><img src="https://github.com/chris-ritsen/vim-autocorrect/blob/master/demo/description.gif?raw=true" alt="" title="vim-autocorrect description" width="474"/></p>
 
@@ -31,7 +31,7 @@ So instead of that, abbreviations are loading asynchronously in batches at a
 delay with `timer_start`.  About 10 seconds after loading the package, it
 should have sourced everything.
 
-#### Rules
+### Rules
 
 <p align="center"><img src="https://github.com/chris-ritsen/vim-autocorrect/blob/master/demo/rules.gif?raw=true" alt="" title="vim-autocorrect rules" width="474"/></p>
 
@@ -79,7 +79,7 @@ made by using both hands, especially if capitalization is involved.
 - Review recently added typos and check for errors.  Hastily adding them and
   assuming `spellsuggest` got it right isn't reliable.
 
-#### Installation
+### Installation
 
 This is a package of two vim plugins and should be installed to
 `~/.vim/pack/vim-autocorrect`.  The
@@ -94,7 +94,7 @@ let g:abbrev_file = expand('$HOME/.vim/pack/vim-autocorrect/opt/vim-abbrev/plugi
 ```
 
 
-#### Usage
+### Usage
 
 To source the list of abbreviations (i.e., enable autocorrect):
 
