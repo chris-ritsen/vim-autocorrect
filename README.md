@@ -1,4 +1,5 @@
 #### Description
+
 <p align="center"><img src="https://github.com/chris-ritsen/vim-autocorrect/blob/master/demo/description.gif?raw=true" alt="" title="vim-autocorrect description" width="474"/></p>
 
 This is a vim package for an autocorrect feature built on the `iabbrev` and
@@ -6,7 +7,7 @@ This is a vim package for an autocorrect feature built on the `iabbrev` and
 qwerty keyboards.  The result is useful for writing general prose or code, but
 is especially good for a stream-of-consciousness or for transcription.
 
-The full list of over 43,000 typos is in
+The full list of over 44,000 typos is in
 [abbrev](opt/vim-abbrev/plugin/abbrev).  It is made up of only lines like
 these:
 
@@ -15,13 +16,14 @@ teh the
 ````
 
 These are then added to vim as iabbrev definitions:
+
 ```
 iabbrev teh the
 ````
 
-It's not a grammar checker.  There's no way to fix transposition typos on short
-words like from/form, but it works well for longer words or those that are
-difficult to spell.
+It's not a grammar checker.  There's no way to fix transposition typos on
+short words like f ro m / f or m, but it works well for longer words or those
+that are difficult to spell.
 
 The problem was that it takes time to source this list and with every
 abbreviation added it takes vim longer to insert one, which blocks user input.
@@ -30,6 +32,7 @@ delay with `timer_start`.  About 10 seconds after loading the package, it
 should have sourced everything.
 
 #### Rules
+
 <p align="center"><img src="https://github.com/chris-ritsen/vim-autocorrect/blob/master/demo/rules.gif?raw=true" alt="" title="vim-autocorrect rules" width="474"/></p>
 
 Deleting the words in [abbrev](opt/vim-abbrev/plugin/abbrev) and starting from
@@ -37,10 +40,10 @@ scratch with any set of rules is an option, but the included list was created
 by making every effort to avoid unintentional corrections.
 
 - Add accents to letters only if the correct word is unambiguous.
-- Add typos only; don't use this for expanding abbreviated words
-- Avoid adding short words, such as those under four characters long.  The typo
-  "atht" made by typing "at that" with a mistimed spacebar should not be
-  corrected into "that".
+- Add typos only; don't use this for expanding abbreviated words.
+- Avoid adding short words, such as those under four characters long.  The
+  typo "atht" made by typing "at that" with a mistimed spacebar should not be
+  corrected into "at" or "that".
 - Avoid making decisions about mixed-case acronyms.
 - Don't add words that are unlikely to broadly usable, such as camel case
   variable names.
@@ -50,8 +53,8 @@ by making every effort to avoid unintentional corrections.
 - Don't correct short words with a missing letter
 - Don't pluralize words that weren't already pluralized.
 - No synthetic typos.
-- Prioritize compatibility with writing prose over code, but attempt to make it
-  work with both if possible.
+- Prioritize compatibility with writing prose over code, but attempt to make
+  it work with both if possible.
 - Remove any autocorrection that results in a word that was unintended.
 - Remove any leading characters from the previous word due to a mistimed
   spacebar press.
@@ -64,7 +67,7 @@ by making every effort to avoid unintentional corrections.
 This is a package of two vim plugins and should be installed to
 `~/.vim/pack/vim-autocorrect`.  The
 [autocorrect.vim](start/vim-abbrev-add/plugin/autocorrect.vim) plugin has
-functions to interactively add abbreviations to the list. By default, the
+functions to interactively add abbreviations to the list.  By default, the
 typos and their corrections are added to
 [abbrev](opt/vim-abbrev/plugin/abbrev), but this can be overridden by setting
 the variable `g:abbrev_file`.
@@ -91,7 +94,7 @@ To quickly add abbreviations to the file after making typos, map the
 nnoremap <silent> <leader>d <esc>vip:call AutoCorrect()<CR>
 ```
 
-The `vip` here will select the current paragraph and pull out typos and use the
-built-in `spellsuggest` feature to guess at a correction.  After pressing
+The `vip` here will select the current paragraph and pull out typos and use
+the built-in `spellsuggest` feature to guess at a correction.  After pressing
 `enter` or `<c-j>` to confirm the new abbreviations, they will be written to
 the file and added with iabbrev.  Removal of words must be done manually.
