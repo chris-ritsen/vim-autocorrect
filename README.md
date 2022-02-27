@@ -23,12 +23,6 @@ It's not a grammar checker.  There's no way to fix transposition typos on
 short words like `from`/`form`, but it works well for longer words or those
 that are difficult to spell.
 
-The problem was that it takes time to source this list and with every
-abbreviation added it takes vim longer to insert one, which blocks user input.
-So instead of that, abbreviations are loading asynchronously in batches at a
-delay with `timer_start`.  About 10 seconds after loading the package, it
-should have sourced everything.
-
 <p align="center"><img src="https://github.com/chris-ritsen/vim-autocorrect/blob/master/demo/description.gif?raw=true" alt="" title="vim-autocorrect description" width="474"/></p>
 
 ## Rules
@@ -113,7 +107,11 @@ To source the list of abbreviations (i.e., enable autocorrect):
 :packadd vim-abbrev
 ```
 
-This will take several seconds to load.
+This will take several seconds to load.  The problem is that it takes time to
+source this list and with every abbreviation added it takes vim longer to
+insert one, which blocks user input.  Abbreviations are loading asynchronously
+in batches of decreasing size at a delay with `timer_start`.  About 10 seconds
+after loading the package, it should have sourced everything.
 
 To quickly add abbreviations to the file after making typos, map the
 `AutoCorrect` command like this:
@@ -130,4 +128,4 @@ the file and added with iabbrev.  Removal of words must be done manually.
 If you need to write a word that would otherwise be autocorrected, such as
 `teh`, type `<C-C>` or `<C-V>` after writing the word. `<C-C>` goes back to
 normal mode without performing the correction, while `<C-V>` stays in insert
-mode
+mode.
