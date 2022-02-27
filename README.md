@@ -40,42 +40,53 @@ prioritize the position of letters on a standard qwerty keyboard before
 considering spelling mistakes.  Many typos are generated from timing errors
 made by using both hands, especially if capitalization is involved.
 
-- Add diacritical marks to letters only if the correct word is unambiguous.
-  Correcting `Senor` to `Señor` is fine right up until `Senor` is written as a
-  typo for `Sensor` or `Senior`.
-- Add typos only; don't use this for expanding abbreviated words.  At most,
-  this should be limited to a character or two omitted from the end of a long
-  word, or a short word if the correct word is unambiguous.  Correcting `abou`
-  to `about` is fine.
+### General
+
 - Avoid adding short typos or words, such as those under four characters long.
 - Avoid making decisions about mixed-case acronyms.
-- Don't add contractions or word fragments
+- Don't add contractions or word fragments.  `hadn` shouldn't correct to
+  `hand` and no entry should exist for `shouldn` or `couldn`.
 - Don't add words that are unlikely to broadly usable, such as camel case
   variable names.
-- Don't attempt to localize/localise words.
-- Don't change capitalization of words, as it could be part of a string
-  literal or variable name.  `Paypal` should not be changed into `PayPal`.
-  The word `I` should not corrected when `i` is typed.
-- Don't consider foreign words as typos, if known.
-- Don't correct short words with a missing letter.
-- Don't enforce a preferred spelling.  `Eery` should not be corrected to
-  `Eerie`.
 - Don't pluralize words that weren't already pluralized.
-- No synthetic typos.
 - Prioritize compatibility with writing prose over code, but attempt to make
   it work with both if possible.
 - Remove any autocorrection that results in a word that was unintended.
+- Remove any typos that end up being programs, libraries, variables, names,
+  nouns, brands, etc., but only when discovered.  For example, the program
+  named `mosquitto` should not be corrected to `mosquito` and `msoquitto`
+  should be corrected to `mosquitto`.
+- Review recently added typos and check for errors.  Hastily adding them and
+  assuming `spellsuggest` got it right isn't reliable.
+
+### Spelling mistakes
+
+- Add diacritical marks to letters only if the correct word is unambiguous.
+  Correcting `Senor` to `Señor` is fine right up until `Senor` is written as a
+  typo for `Sensor` or `Senior`.
+- Don't change capitalization of words, as it could be part of a string
+  literal or variable name.  `Paypal` should not be changed into `PayPal`.
+  The word `I` should not corrected when `i` is typed.
+- Don't attempt to localize/localise words.
+- Don't enforce a preferred spelling.  `Eery` should not be corrected to
+  `Eerie`.
+
+### Typing mistakes
+
+- Don't consider foreign words as typos, if known.
+- Don't correct short words with a missing letter.
+- Don't use this for expanding abbreviated words.  At most, this should be
+  limited to a character or two omitted from the end of a long word, or a
+  short word if the correct word is unambiguous.  Correcting `abou` to `about`
+  is fine.
+- No synthetic typos.
 - Remove any leading characters from the previous word due to a mistimed
   spacebar press, unless they are valid words or used as variable names.  For
   example, `yto` might have been a misspelling of `toy` but it was actually a
   stray letter from a previous word prefixed to the word `to`.  The typo
   `atht` made by typing `at that` with a mistimed spacebar should not be
   corrected into `at` or `that`.
-- Remove any typos that end up being programs, libraries, variables, names,
-  nouns, brands, etc., but only when discovered.  For example, the program
-  named `mosquitto` should not be corrected to `mosquito`.
-- Review recently added typos and check for errors.  Hastily adding them and
-  assuming `spellsuggest` got it right isn't reliable.
+
 
 <p align="center"><img src="https://github.com/chris-ritsen/vim-autocorrect/blob/master/demo/rules.gif?raw=true" alt="" title="vim-autocorrect rules" width="474"/></p>
 
