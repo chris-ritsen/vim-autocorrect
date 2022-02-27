@@ -20,7 +20,7 @@ iabbrev teh the
 ````
 
 It's not a grammar checker.  There's no way to fix transposition typos on
-short words like f ro m / f or m, but it works well for longer words or those
+short words like `from`/`form`, but it works well for longer words or those
 that are difficult to spell.
 
 The problem was that it takes time to source this list and with every
@@ -55,7 +55,7 @@ made by using both hands, especially if capitalization is involved.
 - Remove any typos that end up being programs, libraries, variables, names,
   nouns, brands, etc., but only when discovered.  For example, the program
   named `mosquitto` should not be corrected to `mosquito` and `msoquitto`
-  should be corrected to `mosquitto`.
+  should be corrected to `mosquitto`, not `mosquito`.
 - Review recently added typos and check for errors.  Hastily adding them and
   assuming `spellsuggest` got it right isn't reliable.
 
