@@ -43,12 +43,12 @@ considering spelling mistakes.  Many typos are generated from timing errors
 made by using both hands, especially if capitalization is involved.
 
 - Add diacritical marks to letters only if the correct word is unambiguous.
-  Correcting "Senor" to "Señor" is fine right up until "Senor" is written as a
-  typo for "Sensor" or "Senior".
+  Correcting `Senor` to `Señor` is fine right up until `Senor` is written as a
+  typo for `Sensor` or `Senior`.
 - Add typos only; don't use this for expanding abbreviated words.  At most,
   this should be limited to a character or two omitted from the end of a long
-  word, or a short word if the correct word is unambiguous.  Correcting "abou"
-  to "about" is fine.
+  word, or a short word if the correct word is unambiguous.  Correcting `abou`
+  to `about` is fine.
 - Avoid adding short words, such as those under four characters long.
 - Avoid making decisions about mixed-case acronyms.
 - Don't add contractions or word fragments
@@ -56,12 +56,12 @@ made by using both hands, especially if capitalization is involved.
   variable names.
 - Don't attempt to localize/localise words.
 - Don't change capitalization of words, as it could be part of a string
-  literal or variable name.  "Paypal" should not be changed into "PayPal".
-  The word "I" should not corrected when "i" is typed.
+  literal or variable name.  `Paypal` should not be changed into `PayPal`.
+  The word `I` should not corrected when `i` is typed.
 - Don't consider foreign words as typos, if known.
 - Don't correct short words with a missing letter.
-- Don't enforce a preferred spelling.  "Eery" should not be corrected to
-  "Eerie".
+- Don't enforce a preferred spelling.  `Eery` should not be corrected to
+  `Eerie`.
 - Don't pluralize words that weren't already pluralized.
 - No synthetic typos.
 - Prioritize compatibility with writing prose over code, but attempt to make
@@ -69,13 +69,13 @@ made by using both hands, especially if capitalization is involved.
 - Remove any autocorrection that results in a word that was unintended.
 - Remove any leading characters from the previous word due to a mistimed
   spacebar press, unless they are valid words or used as variable names.  For
-  example, "yto" might have been a misspelling of "toy" but it was actually a
-  stray letter from a previous word prefixed to the word "to".  The typo
-  "atht" made by typing "at that" with a mistimed spacebar should not be
-  corrected into "at" or "that".
+  example, `yto` might have been a misspelling of `toy` but it was actually a
+  stray letter from a previous word prefixed to the word `to`.  The typo
+  `atht` made by typing `at that` with a mistimed spacebar should not be
+  corrected into `at` or `that`.
 - Remove any typos that end up being programs, libraries, variables, names,
   nouns, brands, etc., but only when discovered.  For example, the program
-  named `mosquitto` should not be corrected to "mosquito".
+  named `mosquitto` should not be corrected to `mosquito`.
 - Review recently added typos and check for errors.  Hastily adding them and
   assuming `spellsuggest` got it right isn't reliable.
 
@@ -117,6 +117,6 @@ the built-in `spellsuggest` feature to guess at a correction.  After pressing
 the file and added with iabbrev.  Removal of words must be done manually.
 
 If you need to write a word that would otherwise be autocorrected, such as
-"teh", type `<C-C>` or `<C-V>` after writing the word. `<C-C>` goes back to
+`teh`, type `<C-C>` or `<C-V>` after writing the word. `<C-C>` goes back to
 normal mode without performing the correction, while `<C-V>` stays in insert
 mode
