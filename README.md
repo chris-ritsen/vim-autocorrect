@@ -1,7 +1,5 @@
 ## Description
 
-<p align="center"><img src="https://github.com/chris-ritsen/vim-autocorrect/blob/master/demo/description.gif?raw=true" alt="" title="vim-autocorrect description" width="474"/></p>
-
 This is a vim package for an autocorrect feature built on the `iabbrev` and
 `spellsuggest` commands and years worth of spelling mistakes and typos made on
 qwerty keyboards.  The result is useful for writing general prose or code, but
@@ -31,9 +29,9 @@ So instead of that, abbreviations are loading asynchronously in batches at a
 delay with `timer_start`.  About 10 seconds after loading the package, it
 should have sourced everything.
 
-## Rules
+<p align="center"><img src="https://github.com/chris-ritsen/vim-autocorrect/blob/master/demo/description.gif?raw=true" alt="" title="vim-autocorrect description" width="474"/></p>
 
-<p align="center"><img src="https://github.com/chris-ritsen/vim-autocorrect/blob/master/demo/rules.gif?raw=true" alt="" title="vim-autocorrect rules" width="474"/></p>
+## Rules
 
 Deleting the words in [abbrev](opt/vim-abbrev/plugin/abbrev) and starting from
 scratch with any set of rules is an option, but the included list was created
@@ -78,6 +76,8 @@ made by using both hands, especially if capitalization is involved.
   named `mosquitto` should not be corrected to `mosquito`.
 - Review recently added typos and check for errors.  Hastily adding them and
   assuming `spellsuggest` got it right isn't reliable.
+
+<p align="center"><img src="https://github.com/chris-ritsen/vim-autocorrect/blob/master/demo/rules.gif?raw=true" alt="" title="vim-autocorrect rules" width="474"/></p>
 
 ## Installation
 
