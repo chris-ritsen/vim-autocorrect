@@ -49,7 +49,7 @@ made by using both hands, especially if capitalization is involved.
   this should be limited to a character or two omitted from the end of a long
   word, or a short word if the correct word is unambiguous.  Correcting `abou`
   to `about` is fine.
-- Avoid adding short words, such as those under four characters long.
+- Avoid adding short typos or words, such as those under four characters long.
 - Avoid making decisions about mixed-case acronyms.
 - Don't add contractions or word fragments
 - Don't add words that are unlikely to broadly usable, such as camel case
