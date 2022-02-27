@@ -42,7 +42,6 @@ prioritize the position of letters on a standard qwerty keyboard before
 considering spelling mistakes.  Many typos are generated from timing errors
 made by using both hands, especially if capitalization is involved.
 
-
 - Add diacritical marks to letters only if the correct word is unambiguous.
   Correcting "Senor" to "Señor" is fine right up until "Senor" is written as a
   typo for "Sensor" or "Senior".
@@ -76,7 +75,7 @@ made by using both hands, especially if capitalization is involved.
   corrected into "at" or "that".
 - Remove any typos that end up being programs, libraries, variables, names,
   nouns, brands, etc., but only when discovered.  For example, the program
-  named 'mosquitto' should not be corrected to 'mosquito'.
+  named `mosquitto` should not be corrected to "mosquito".
 - Review recently added typos and check for errors.  Hastily adding them and
   assuming `spellsuggest` got it right isn't reliable.
 
@@ -116,3 +115,8 @@ The `vip` here will select the current paragraph and pull out typos and use
 the built-in `spellsuggest` feature to guess at a correction.  After pressing
 `enter` or `<c-j>` to confirm the new abbreviations, they will be written to
 the file and added with iabbrev.  Removal of words must be done manually.
+
+If you need to write a word that would otherwise be autocorrected, such as
+"teh", type `<C-C>` or `<C-V>` after writing the word. `<C-C>` goes back to
+normal mode without performing the correction, while `<C-V>` stays in insert
+mode
