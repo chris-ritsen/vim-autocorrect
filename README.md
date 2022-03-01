@@ -224,8 +224,7 @@ happens in practice.
   limited to a character or two omitted from the end of a long word, or a
   short word if the correct word is unambiguous.  Correcting `abou` to `about`
   is fine.
-- Don't change the tense of words.  This is similar to the rule about
-  pluralization; be explicit about.
+- Don't change the tense of words.  Be explicit about it if possible.
 - Generally, don't pluralize words that weren't already pluralized.  While
   `keyboaresd` is obviously a transposition typo for `keyboards`, it's
   corrected to `keyboard` instead.  Type an explicit `s` at the end of a badly
