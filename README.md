@@ -4,17 +4,16 @@ This is a vim package for an autocorrect feature built on the `iabbrev` and
 `spellsuggest` commands and years worth of spelling mistakes and typos made on
 qwerty keyboards.
 
-The result is useful for writing general prose or code, but
-is especially good for a stream-of-consciousness or for transcription.  It's
-fast and accurate enough to consider using unconditionally every time vim is
-started.
+The result is useful for writing general prose or code, but is especially good
+for a stream-of-consciousness or for transcription.  It's fast and accurate
+enough to consider using unconditionally every time vim is started.
 
 The goal is to create the largest list of typos and spelling mistakes with
 opinionated corrections that exists, without compromising accuracy and without
 ever doing anything unexpected.
 
-It's not possible to fix everything all the
-time, but if used correctly, many typos will be seen once and never again.
+It's not possible to fix everything all the time, but if used correctly, many
+typos will be seen once and never again.
 
 The full list of over 44,000 typos is in
 [abbrev](opt/vim-abbrev/plugin/abbrev).  The words in the included list were
