@@ -26,7 +26,6 @@ function! s:get_word(something)
       else
         let value = s:suggestion[0]
       endif
-      
 
       if empty(matchstr(key, "'")) == 1 && matchstr(value, "'s$") == "'s"
         let value = s:suggestion[1]

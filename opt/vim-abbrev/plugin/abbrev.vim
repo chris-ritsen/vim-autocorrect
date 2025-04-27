@@ -15,70 +15,53 @@ endfunc
 let s:time = reltime()
 let s:abbrevs_added = 0
 let s:data = filter(readfile(g:abbrev_file), function('FilterBad'))
-let s:batch_size = 5000
+let s:batch_size = 500
 let s:delay_ms = 1
 
 function s:Callback(start_line)
   return {-> s:DefineAbbrevs(a:start_line)}
 endfunction
 
-let s:map_corrections = {_, correction_dyad -> 'iabbrev ' .. correction_dyad}
-
 function! s:DefineAbbrevs(start_line = 0) abort
-  " As the list of inserted abbreviations grows, vim takes more time to insert
-  " a new abbreviation.  Tune the batch size as the list grows to react to
-  " this effect to process as many lines as possible without perceivably
-  " blocking UI.
-
-  if a:start_line >= 5000 && s:batch_size != 400
+  if a:start_line > 5000 && s:batch_size != 400
     let s:batch_size = 400
     " echomsg 'Batch size changed to' s:batch_size
   endif
 
-  if a:start_line > 10000 && s:batch_size != 300
-    let s:batch_size = 300
+  if a:start_line > 10000 && s:batch_size != 250
+    let s:batch_size = 250
     " echomsg 'Batch size changed to' s:batch_size
   endif
 
-  if a:start_line > 20000 && s:batch_size != 225
-    let s:batch_size = 225
+  if a:start_line > 20000 && s:batch_size != 100
+    let s:batch_size = 100
     " echomsg 'Batch size changed to' s:batch_size
   endif
 
-  if a:start_line > 30000 && s:batch_size != 150
-    let s:batch_size = 150
+  if a:start_line > 30000 && s:batch_size != 75
+    let s:batch_size = 75
     " echomsg 'Batch size changed to' s:batch_size
   endif
 
-  if a:start_line > 40000 && s:batch_size != 125
-    let s:batch_size = 125
-    " echomsg 'Batch size changed to' s:batch_size
-  endif
-
-  if a:start_line > 45000 && s:batch_size != 120
-    let s:batch_size = 120
-    " echomsg 'Batch size changed to' s:batch_size
-  endif
-
-  if a:start_line > 50000 && s:batch_size != 110
-    let s:batch_size = 110
-    " echomsg 'Batch size changed to' s:batch_size
-  endif
-
-  if a:start_line > 60000 && s:batch_size != 90
-    let s:batch_size = 90
-    " echomsg 'Batch size changed to' s:batch_size
-  endif
-
-  if a:start_line > 70000 && s:batch_size != 50
+  if a:start_line > 40000 && s:batch_size != 50
     let s:batch_size = 50
+    " echomsg 'Batch size changed to' s:batch_size
+  endif
+
+  if a:start_line > 45000 && s:batch_size != 40
+    let s:batch_size = 40
+    " echomsg 'Batch size changed to' s:batch_size
+  endif
+
+  if a:start_line > 50000 && s:batch_size != 35
+    let s:batch_size = 35
     " echomsg 'Batch size changed to' s:batch_size
   endif
 
   let end_line = a:start_line + s:batch_size
   let lines = s:data[a:start_line : end_line - 1]
 
-  execute lines->map(s:map_corrections)->join('|')
+  execute lines->map({_, word_pair -> 'iabbrev ' .. word_pair})->join('|')
   let s:abbrevs_added = s:abbrevs_added + lines->len()
 
   if end_line < s:data->len()
@@ -89,4 +72,4 @@ function! s:DefineAbbrevs(start_line = 0) abort
   endif
 endfunc
 
-call s:DefineAbbrevs()
+" call s:DefineAbbrevs()
